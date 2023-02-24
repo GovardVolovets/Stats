@@ -33,7 +33,7 @@ public class StatsServiceTest {
         int[] months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedNumMonthMin = 9;
-        int actualNumMonthMin = service.minSalesMonth(months);
+        int actualNumMonthMin = service.lastMinSalesMonth(months);
 
         Assertions.assertEquals(expectedNumMonthMin, actualNumMonthMin);
     }
@@ -70,16 +70,4 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expectedQuantityMonthHighAverage, actualQuantityMonthHighAverage);
     }
-
-    @Test
-    public void shouldFindMaxMonthSalesVarTwo() {
-        StatsService service = new StatsService();
-        int[] months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
-        int[] expectedNumMonthMaxVarTwo = {6, 8};
-        int[] actualNumMonthMaxVarTwo = service.maxSalesMonthsVarTwo(months);
-
-        Assertions.assertArrayEquals(expectedNumMonthMaxVarTwo, actualNumMonthMaxVarTwo);
-    }
-
 }
