@@ -33,7 +33,7 @@ public class StatsServiceTest {
         int[] months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedNumMonthMin = 9;
-        int actualNumMonthMin = service.lastMinSalesMonth(months);
+        int actualNumMonthMin = service.minSalesMonth(months);
 
         Assertions.assertEquals(expectedNumMonthMin, actualNumMonthMin);
     }

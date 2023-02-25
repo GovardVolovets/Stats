@@ -22,22 +22,11 @@ public class StatsService {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < sales[minMonth]) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
         return minMonth + 1;
-    }
-
-    public int lastMinSalesMonth(int[] sales) {
-        int lastMinMonth = -1;
-
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[minSalesMonth(sales)] && (lastMinMonth == -1 || sales[i] <= sales[lastMinMonth])) {
-                lastMinMonth = i;
-            }
-        }
-        return lastMinMonth + 1;
     }
 
     public int maxSalesMonths(int[] sales) {
